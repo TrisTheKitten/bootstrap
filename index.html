@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tris's Game Vault - Checkout</title>
+    <meta name="description" content="Premium game store checkout system">
+    <meta name="author" content="Tris's Game Vault">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="invoice-header">
+            <div class="row">
+                <div class="col-8">
+                    <div class="company-info">
+                        <h1 class="company-name">Tris's Game Vault</h1>
+                        <p class="company-address">
+                            123 Gaming Plaza<br>
+                            Siam Square, Pathum Wan<br>
+                            Bangkok, Thailand<br>
+                            10330
+                        </p>
+                        <p class="contact-info">
+                            Phone: +66 96-141-1384 &nbsp;&nbsp;&nbsp; Mobile: +66 96-141-1384 
+                            <span style="float: right;">
+                                <span id="currentDate"></span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-4 text-end">
+                    <div class="invoice-title">
+                        <i class="fas fa-gamepad game-logo"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="invoice-details">
+            <div class="row">
+                <div class="col-12">
+                    <p class="currency-info">
+                        <span class="left-info">Page No. 1</span>
+                        <strong>Currency THB</strong>
+                        <span class="right-info">No.: GV000001</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="customer-section">
+            <div class="row">
+                <div class="col-6">
+                    <p style="text-align: left;">
+                        <strong>Customer Information:</strong><br>
+                        <span id="customerName">John Snow</span><br>
+                        <span id="customerPhone">+66 96-123-4567</span><br>
+                        <span id="customerEmail">johnsnow2077@gmail.com</span>
+
+                    </p>
+                </div>
+                <div class="col-6">
+                    <p style="text-align: center;">
+                        <strong>Ship to:</strong><br>
+                        <span id="shipToName">John Snow</span><br>
+                        <span id="shipToAddress1">456 Gamer Street</span><br>
+                        <span id="shipToAddress2">Digital District</span><br>
+                        <span id="shipToAddress3">Bangkok 10200</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="order-details">
+            <table class="details-table">
+                <thead>
+                    <tr>
+                        <th>Salesperson</th>
+                        <th>Your P.O. No.</th>
+                        <th>Date Shipped</th>
+                        <th>Shipped Via</th>
+                        <th>F.O.B Point</th>
+                        <th>Terms</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tris Gaming</td>
+                        <td>TGV-2024-001</td>
+                        <td id="shipDate"></td>
+                        <td>Digital Delivery</td>
+                        <td>Bangkok</td>
+                        <td>Cash on Delivery</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <br>
+        <div class="add-product-section">
+            <button class="btn-success" data-bs-toggle="modal" data-bs-target="#addGameModal">
+                Add Product
+            </button>
+        </div>
+
+        <div class="products-section">
+            <table class="products-table">
+                <thead>
+                    <tr>
+                        <th>Quantity</th>
+                        <th>Description</th>
+                        <th>Unit Price (THB)</th>
+                        <th>Amount (THB)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cartTableBody">
+                    
+                </tbody>
+                <tfoot class="totals-section">
+                    <tr class="total-row">
+                        <td colspan="3" class="total-label">Subtotal</td>
+                        <td class="total-amount" id="subtotal">฿0.00</td>
+                        <td></td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="3" class="total-label">VAT (7%)</td>
+                        <td class="total-amount" id="vat">฿0.00</td>
+                        <td></td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="3" class="total-label">Shipping & Handling</td>
+                        <td class="total-amount" id="shipping">0.00</td>
+                        <td></td>
+                    </tr>
+                    <tr class="total-row final-total">
+                        <td colspan="3" class="total-label">Total Due</td>
+                        <td class="total-amount" id="total">฿0.00</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <br>
+        <div class="payment-info">
+            <p class="text-center">
+                <strong>Make all checks payable to:</strong><br>
+                <em>Tris's Game Vault</em><br>
+                <strong>If you have any question concerning this invoice, call:</strong><br>
+                +66 96-141-1384<br><br>
+                <strong>THANK YOU FOR YOUR BUSINESS</strong>
+            </p>
+        </div>
+
+
+    </div>
+
+    <div class="modal fade" id="addGameModal" tabindex="-1" aria-labelledby="addGameModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addGameModalLabel">
+                        <i class="fas fa-gamepad"></i> Add Game to Cart
+                    </h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="addGameForm">
+                        <div class="form-group">
+                            <label for="gameSelect" class="form-label">Select Game:</label>
+                            <select class="form-control" id="gameSelect" required>
+                                <option value="">Choose a game...</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" id="gameDetailsSection" style="display: none;">
+                            <div class="p-3" style="background: var(--background-primary); border-radius: 10px; border: 1px solid rgba(75, 136, 255, 0.2);">
+                                <h6 style="color: var(--text-primary); margin-bottom: 10px;" id="selectedGameName">Game Name</h6>
+                                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 10px;" id="selectedGameDescription">Description</p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <span style="color: var(--text-secondary); font-size: 12px;">Category:</span>
+                                        <div style="color: var(--text-primary);" id="selectedGameCategory">-</div>
+                                    </div>
+                                    <div class="col-6">
+                                        <span style="color: var(--text-secondary); font-size: 12px;">Platform:</span>
+                                        <div style="color: var(--text-primary);" id="selectedGamePlatform">-</div>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <span style="color: var(--text-secondary); font-size: 12px;">Price:</span>
+                                    <div style="color: var(--primary-color); font-weight: 600; font-size: 16px;" id="selectedGamePrice">฿0.00</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quantity" class="form-label">Quantity:</label>
+                            <input type="number" class="form-control" id="quantity" min="1" max="10" value="1" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fas fa-times"></i> Cancel
+                    </button>
+                    <button type="button" class="btn btn-primary" id="addToCartBtn">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/gamestore.js"></script>
+</body>
+
+</html>

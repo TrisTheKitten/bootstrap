@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Cyberpunk 2077",
+    "description": "Open-world action-adventure RPG set in Night City",
+    "price": 1299.00,
+    "category": "RPG",
+    "platform": "PC"
+  },
+  {
+    "id": 2,
+    "name": "The Witcher 3: Wild Hunt",
+    "description": "Fantasy RPG with monster hunting and epic quests",
+    "price": 899.00,
+    "category": "RPG",
+    "platform": "PC"
+  },
+  {
+    "id": 3,
+    "name": "Call of Duty: Modern Warfare III",
+    "description": "First-person shooter with intense multiplayer action",
+    "price": 1599.00,
+    "category": "FPS",
+    "platform": "PC"
+  },
+  {
+    "id": 4,
+    "name": "Elden Ring",
+    "description": "Dark fantasy action RPG from the creators of Dark Souls",
+    "price": 1199.00,
+    "category": "Action RPG",
+    "platform": "PC"
+  },
+  {
+    "id": 5,
+    "name": "FIFA 25",
+    "description": "Latest football simulation with updated teams and players",
+    "price": 1399.00,
+    "category": "Sports",
+    "platform": "PC"
+  },
+  {
+    "id": 6,
+    "name": "Baldur's Gate 3",
+    "description": "Turn-based RPG with deep character customization",
+    "price": 1299.00,
+    "category": "RPG",
+    "platform": "PC"
+  },
+  {
+    "id": 7,
+    "name": "Grand Theft Auto V",
+    "description": "Open-world crime action game with online multiplayer",
+    "price": 799.00,
+    "category": "Action",
+    "platform": "PC"
+  },
+  {
+    "id": 8,
+    "name": "Minecraft",
+    "description": "Creative sandbox game with infinite possibilities",
+    "price": 649.00,
+    "category": "Sandbox",
+    "platform": "PC"
+  },
+  {
+    "id": 9,
+    "name": "Red Dead Redemption 2",
+    "description": "Western-themed action-adventure in an immersive open world",
+    "price": 1199.00,
+    "category": "Action Adventure",
+    "platform": "PC"
+  },
+  {
+    "id": 10,
+    "name": "Hogwarts Legacy",
+    "description": "Action RPG set in the world of Harry Potter",
+    "price": 1499.00,
+    "category": "Action RPG",
+    "platform": "PC"
+  }
+]

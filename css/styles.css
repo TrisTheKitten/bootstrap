@@ -1,0 +1,375 @@
+:root {
+    --primary-color: #4B88FF;
+    --background-primary: #0A0A0B;
+    --surface-elevated: #232426;
+    --text-primary: #FFFFFF;
+    --text-secondary: #BBD6FF;
+    --text-muted: #BBCED6;
+    --vat-rate: 0.07;
+    --border-color: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gottak', Arial, sans-serif;
+    background-color: var(--text-primary);
+    color: var(--border-color);
+    line-height: 1.4;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.invoice-header {
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.company-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--border-color);
+    margin-bottom: 5px;
+}
+
+.company-address {
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    font-size: 14px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.invoice-title {
+    text-align: right;
+}
+
+.invoice-title h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.game-logo {
+    font-size: 40px;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.invoice-date {
+    font-size: 14px;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.currency-info {
+    text-align: center;
+    font-weight: bold;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 0;
+    margin: 15px 0;
+    position: relative;
+}
+
+.left-info {
+    position: absolute;
+    left: 0;
+}
+
+.right-info {
+    position: absolute;
+    right: 0;
+}
+
+.customer-section {
+    margin: 20px 0;
+}
+
+.customer-section p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.details-table th {
+    background-color: #B8D4E7;
+    color: darkblue;
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.details-table td {
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.add-product-section {
+    margin: 15px 0;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.products-table th {
+    background-color: #B8D4E7;
+    color: darkblue;
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.products-table td {
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    padding: 8px;
+    font-size: 12px;
+    vertical-align: top;
+    min-height: 25px;
+}
+
+.empty-row td {
+    height: 25px;
+    border-bottom: none;
+}
+
+.totals-section {
+    border-top: 1px solid var(--border-color);
+}
+
+.total-row td {
+    border-bottom: none;
+    border-left: none;
+    padding: 5px 8px;
+}
+
+.total-label {
+    text-align: right;
+    font-weight: bold;
+    color: darkblue;
+    border-right: 1px solid var(--border-color);
+}
+
+.total-amount {
+    text-align: right;
+    border-right: 1px solid var(--border-color);
+    font-weight: bold;
+}
+
+.final-total .total-label,
+.final-total .total-amount {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.payment-info {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+
+.modal-content {
+    background-color: var(--surface-elevated);
+    color: var(--text-primary);
+    border: 1px solid rgba(75, 136, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: rgba(32, 53, 90, 0.15) 11px 11px 30px -10px;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(75, 136, 255, 0.2);
+    padding: 20px;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: 200;
+    color: var(--text-primary);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--background-primary);
+    border: 1px solid rgba(75, 136, 255, 0.3);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(75, 136, 255, 0.2);
+}
+
+.form-control option {
+    background-color: var(--surface-elevated);
+    color: var(--text-primary);
+}
+
+.close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.close:hover {
+    color: var(--text-primary);
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+}
+
+.btn-primary:hover {
+    background-color: #6BA0FF;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(75, 136, 255, 0.3);
+}
+
+.btn-danger {
+    background-color: #ff4757;
+    color: var(--text-primary);
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.btn-danger:hover {
+    background-color: #ff3742;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-muted);
+    border: 1px solid rgba(187, 206, 214, 0.3);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(187, 206, 214, 0.1);
+    color: var(--text-primary);
+}
+
+.game-info {
+    text-align: left;
+}
+
+.game-name {
+    font-weight: bold;
+    color: var(--border-color);
+    margin-bottom: 2px;
+}
+
+.game-details {
+    font-size: 11px;
+    color: #666;
+    line-height: 1.2;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .company-name {
+        font-size: 16px;
+    }
+    
+    .invoice-title h2 {
+        font-size: 24px;
+    }
+    
+    .products-table, .details-table {
+        font-size: 10px;
+    }
+    
+    .products-table th, .products-table td,
+    .details-table th, .details-table td {
+        padding: 4px;
+    }
+}
